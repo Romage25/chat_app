@@ -1,3 +1,4 @@
+import 'package:chat_app/CreateAccount.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -65,6 +66,20 @@ class _LoginScreenState extends State<LoginScreen> {
           height: size.height / 10,
         ),
         customButton(size),
+        SizedBox(
+            height: size.height / 20,
+          ),
+          GestureDetector(
+            onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => CreateAccount())),
+            child: Text(
+              "Create Account",
+              style: TextStyle(
+                color: Colors.blue,
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          )
       ]),
     );
   }
